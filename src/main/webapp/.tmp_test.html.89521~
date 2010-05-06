@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>JSON Ads</title>
+		
+		<script type="text/javascript" src="http://www.google.com/jsapi"/>
+		<script>
+			google.load("jquery", "1.3.2");
+		</script>
+		<script type="text/javascript" src="js/ad_widget.js"/>
+			
+	</head>
+	<body>
+		<h1>Add Ad Campaign Form</h1>
+		<form id="adAddCampaignForm" class="partner-form">
+			<table>
+				<tr><td>Partner Id:</td><td> <input id="partner_id" type="text"/></td></tr>
+				<tr><td>Duration:</td><td> <input id="duration" type="text"/></td></tr>			
+				<tr><td>Ad Content:</td><td> <input id="ad_content" type="text"/></td></tr>
+			</table>
+		</form>
+		<input id="goBtn"  type="button" value="Add Ad Campaign"/>
+	
+	
+		<h1>Example Ad for smooth_partner</h1>
+		<input type="hidden" id="adPartnerId" value="smooth_partner"/>
+		<div id="exampleAd"></div>
+		<div id="noAd">Add not currently available</div>
+		
+		<input id="reloadAdBtn" type="button" value="Reload Ad"/>
+		
+		<script type="text/javascript">
+			loadAd($("#adPartnerId").val());
+		</script>
+	</body>
+</html>
